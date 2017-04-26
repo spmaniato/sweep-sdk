@@ -27,6 +27,10 @@ add_executable(example-c example.c)
 target_link_libraries(example-c PRIVATE ${LIBSWEEP_LIBRARY} ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(example-c SYSTEM PRIVATE ${LIBSWEEP_INCLUDE_DIR})
 
+add_executable(test-c++ test.cc)
+target_link_libraries(test-c++ PRIVATE ${LIBSWEEP_LIBRARY} ${CMAKE_THREAD_LIBS_INIT})
+target_include_directories(test-c++ SYSTEM PRIVATE ${LIBSWEEP_INCLUDE_DIR})
+
 
 # Optional SFML2 based viewer
 include(FindPkgConfig)
