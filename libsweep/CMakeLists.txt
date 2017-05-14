@@ -75,16 +75,16 @@ install(DIRECTORY include/sweep DESTINATION include)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/sweep/config.h DESTINATION include/sweep)
 
 
-# sweep-ctl target.
+# sweep_ctl target.
 
 
-add_executable(sweep-ctl src/sweep-ctl.cc)
-target_include_directories(sweep-ctl PRIVATE include include/sweep ${CMAKE_CURRENT_BINARY_DIR}/include)
-target_link_libraries(sweep-ctl sweep ${CMAKE_THREAD_LIBS_INIT})
+add_executable(sweep_ctl src/sweep_ctl.cc)
+target_include_directories(sweep_ctl PRIVATE include include/sweep ${CMAKE_CURRENT_BINARY_DIR}/include)
+target_link_libraries(sweep_ctl sweep ${CMAKE_THREAD_LIBS_INIT})
 
 include(GNUInstallDirs)
-install(TARGETS sweep-ctl DESTINATION bin)
-install(FILES man/sweep-ctl.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+install(TARGETS sweep_ctl DESTINATION bin)
+install(FILES man/sweep_ctl.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
 
 # Make FindPackage(Sweep) work for CMake users.
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/SweepConfig.cmake DESTINATION lib/cmake/sweep)
