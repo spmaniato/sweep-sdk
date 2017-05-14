@@ -1,14 +1,14 @@
-% sweep-ctl(1) User Manuals
+% sweep_ctl(1) User Manuals
 % Daniel Hofmann
 % February 18, 2017
 
 # NAME
 
-sweep-ctl - get and set Sweep LiDAR hardware properties
+sweep_ctl - get and set Sweep LiDAR hardware properties
 
 # SYNOPSIS
 
-sweep-ctl dev get|set key [value]
+sweep_ctl dev get|set key [value]
 
 # DESCRIPTION
 
@@ -32,8 +32,8 @@ sample\_rate
 
 # EXAMPLE
 
-    $ sweep-ctl /dev/ttyUSB0 get motor_speed
+    $ sweep_ctl /dev/ttyUSB0 get motor_speed
     3
 
-    $ sweep-ctl /dev/ttyUSB0 set motor_speed 5
+    $ sweep_ctl /dev/ttyUSB0 set motor_speed 5
     5
